@@ -2,7 +2,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/premium-hero-dark.svg" />
-  <img src="assets/premium-hero-light.svg" width="100%" alt="Abdullah Karimli, product developer in Baku. I build software, start to finish. ASCII portrait set inside an arch." />
+  <img src="assets/premium-hero-light.svg" width="100%" alt="Abdullah Karimli, product developer in Baku. Large condensed name beside a duotone portrait. Web, mobile, games, AI tools. Available for new work." />
 </picture>
 
 <br />
@@ -11,27 +11,25 @@
 <tr>
 <td width="62%" valign="top">
 
-### Hi, I'm Abdullah.
+I own the whole thing: **the idea, the screens, the database, the launch, and the fixes after it.**
 
-I own the whole thing: **the idea, the screens, the database, the launch, and the fixes after it.** I'm a one-person product studio for businesses in Azerbaijan and beyond, and I ship in Azerbaijani, English and Russian.
-
-My software runs a hearing clinic, restaurant floors, salon calendars and the canteens of a **3,000-employee** company. My game pays players in **Azercell, Bakcell and Nar** credit.
+My software runs a hearing clinic, restaurant floors, salon calendars and the canteens of a **3,000-employee** company. My game pays its players in **Azercell, Bakcell and Nar** credit. I ship in Azerbaijani, English and Russian.
 
 </td>
 <td width="38%" valign="top">
 
-**Now** — taking on new projects<br/>
-**Based** — Baku, Azerbaijan<br/>
-**Builds** — web · mobile · games · AI<br/>
-**Talk** — [book a call ↗](https://abdullahkarimli.vercel.app/book)<br/>
-**Read** — [abdullahkarimli.vercel.app ↗](https://abdullahkarimli.vercel.app/)
+<sub>STATUS</sub><br/>Taking on new projects<br/>
+<sub>BASED</sub><br/>Baku, Azerbaijan<br/>
+<sub>CONTACT</sub><br/>[Book a call ↗](https://abdullahkarimli.vercel.app/book)<br/>
+<sub>PORTFOLIO</sub><br/>[abdullahkarimli.vercel.app ↗](https://abdullahkarimli.vercel.app/)
 
 </td>
 </tr>
 </table>
 
----
+<br />
 
+<sub>01</sub>
 ### Selected work
 
 <table>
@@ -93,9 +91,10 @@ Paste a long video and get back vertical, captioned clips ranked by how likely t
 
 <sub>Also built: **KIND Hearing Center** (clinic site, 185 products) · **GT Competizione** (Roblox racing sim) · **Daybase** · **Household** · **Dynamic Island for Windows**</sub>
 
----
+<br />
 
-### What I work with
+<sub>02</sub>
+### Capabilities
 
 | Product &amp; interface | Web | Mobile &amp; games | Backend, data &amp; AI |
 |---|---|---|---|
@@ -105,21 +104,23 @@ Paste a long video and get back vertical, captioned clips ranked by how likely t
   <img src="https://skillicons.dev/icons?i=figma,nextjs,react,ts,tailwind,vite,supabase,postgres,nodejs,py,docker,lua,swift,kotlin,flutter,go,rust,cpp,git,vercel&perline=20" width="100%" alt="Figma, Next.js, React, TypeScript, Tailwind, Vite, Supabase, PostgreSQL, Node.js, Python, Docker, Lua, Swift, Kotlin, Flutter, Go, Rust, C++, Git, Vercel" />
 </p>
 
-**Quality is part of the build, not an afterthought:** unit &amp; integration (Jest, Vitest) · end-to-end (Playwright, Cypress) · API (Postman) · load (k6) · accessibility (axe, keyboard, screen readers) · server-side anti-cheat.
+Every build is tested: unit and integration (Jest, Vitest), end-to-end (Playwright, Cypress), API (Postman), load (k6), accessibility (axe, keyboard, screen readers) and server-side anti-cheat.
 
----
+<br />
 
-### How a project goes
+<sub>03</sub>
+### Process
 
-| 01 · Call | 02 · Prototype | 03 · Build | 04 · Launch |
+| Call | Prototype | Build | Launch |
 |---|---|---|---|
 | We talk through the problem, who it's for and what *done* looks like. | You click through something real before heavy building starts. | Design, frontend, backend and data, with regular builds you can try. | Deploy, watch real usage, fix what people trip on. |
 
----
+<br />
 
-<p align="center">
-  <b>Have a project in mind?</b> A short video call, no preparation needed.<br/><br/>
-  <a href="https://abdullahkarimli.vercel.app/book"><img src="https://img.shields.io/badge/Book_a_call-1B1918?style=for-the-badge&logoColor=white" alt="Book a call" /></a>
-  &nbsp;
-  <a href="https://abdullahkarimli.vercel.app/"><img src="https://img.shields.io/badge/See_my_work-B4532A?style=for-the-badge" alt="See my work" /></a>
-</p>
+<sub>04</sub>
+### Start a project
+
+A short video call, no preparation needed.
+
+<a href="https://abdullahkarimli.vercel.app/book"><img src="https://img.shields.io/badge/Book_a_call_→-1E3AE6?style=for-the-badge" alt="Book a call" /></a>
+<a href="https://abdullahkarimli.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-0B0C0E?style=for-the-badge" alt="Portfolio" /></a>

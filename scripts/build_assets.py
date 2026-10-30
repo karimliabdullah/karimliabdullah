@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Builds the ASCII portrait and the hero SVGs used by the profile READMEs.
+"""Builds the ASCII portrait and the terminal + flashy hero SVGs.
+
+The premium hero is built by scripts/build_premium.py.
 
 Usage:
     python3 scripts/build_assets.py                 # uses assets/photo.(jpg|png) if present
@@ -24,7 +26,6 @@ ASSETS = ROOT / "assets"
 RAMP = "@%#*+=-:. "
 EASE = "cubic-bezier(0.16, 1, 0.3, 1)"
 MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
-SERIF = "'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif"
 SANS = "-apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif"
 
 
@@ -206,51 +207,6 @@ def terminal_svg(face: list[str]) -> str:
 '''
 
 
-# --------------------------------------------------------------------------- premium
-
-PREMIUM = {
-    "light": dict(bg="#F6F2EB", ink="#1B1918", soft="#6B635A", rule="#DDD5C9", accent="#B4532A", face="#3A332D"),
-    "dark": dict(bg="#151311", ink="#EFE8DD", soft="#A39A8E", rule="#2E2A26", accent="#E2895A", face="#D9CFC2"),
-}
-
-
-def premium_svg(face: list[str], mode: str) -> str:
-    c = PREMIUM[mode]
-    face_svg = ascii_rows_svg(face, 618, 70, 7.2, 8.4, 222, c["face"], delay0=0.25, step=0.012)
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380" role="img" aria-labelledby="t d">
-  <title id="t">Abdullah Karimli — product developer in Baku</title>
-  <desc id="d">Editorial header reading “I build software, start to finish.” beside an ASCII portrait set inside an arch.</desc>
-  <style>
-    .r, .f {{ opacity: 0; animation: in 300ms {EASE} forwards; }}
-    .f {{ transform: translateY(8px); }}
-    @keyframes in {{ to {{ opacity: 1; transform: none; }} }}
-    .dot {{ animation: pulse 2.4s {EASE} infinite; transform-origin: 63px 312px; }}
-    @keyframes pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: .35; }} }}
-    {reduced_motion(".r, .f, .dot")}
-  </style>
-  <defs>
-    <clipPath id="arch"><path d="M600 352 V160 A129 129 0 0 1 858 160 V352 Z"/></clipPath>
-  </defs>
-  <rect width="900" height="380" rx="18" fill="{c["bg"]}"/>
-  <rect x=".5" y=".5" width="899" height="379" rx="17.5" fill="none" stroke="{c["rule"]}"/>
-  <text class="f" x="56" y="78" fill="{c["accent"]}" font-family="{SANS}" font-size="12" font-weight="600" letter-spacing="3.2">ABDULLAH KARIMLI — PRODUCT DEVELOPER, BAKU</text>
-  <line class="f" x1="56" y1="98" x2="120" y2="98" stroke="{c["accent"]}" stroke-width="2" style="animation-delay:60ms"/>
-  <text class="f" x="54" y="168" fill="{c["ink"]}" font-family="{SERIF}" font-size="56" letter-spacing="-1.2" style="animation-delay:120ms">I build software,</text>
-  <text class="f" x="54" y="232" fill="{c["ink"]}" font-family="{SERIF}" font-size="56" font-style="italic" letter-spacing="-1.2" style="animation-delay:180ms">start to finish.</text>
-  <text class="f" x="56" y="274" fill="{c["soft"]}" font-family="{SANS}" font-size="16" style="animation-delay:240ms">Apps, websites &amp; games — designed, built and shipped solo.</text>
-  <g class="f" style="animation-delay:300ms">
-    <circle class="dot" cx="63" cy="312" r="4.5" fill="#3FA66B"/>
-    <text x="76" y="317" fill="{c["ink"]}" font-family="{SANS}" font-size="13" font-weight="600">Taking on new projects</text>
-    <text x="246" y="317" fill="{c["soft"]}" font-family="{SANS}" font-size="13">·  AZ / EN / RU  ·  Web · Mobile · Games · AI</text>
-  </g>
-  <path d="M600 352 V160 A129 129 0 0 1 858 160 V352 Z" fill="none" stroke="{c["rule"]}" stroke-width="1.5"/>
-  <g clip-path="url(#arch)">
-    {face_svg}
-  </g>
-</svg>
-'''
-
-
 # --------------------------------------------------------------------------- flashy
 
 def flashy_svg(face: list[str]) -> str:
@@ -315,8 +271,6 @@ def main() -> None:
 
     (ASSETS / "face.txt").write_text("\n".join(on_light(64, 32)) + "\n")
     (ASSETS / "terminal-hero.svg").write_text(terminal_svg(on_dark(46, 24)))
-    (ASSETS / "premium-hero-light.svg").write_text(premium_svg(on_light(46, 34), "light"))
-    (ASSETS / "premium-hero-dark.svg").write_text(premium_svg(on_dark(46, 34), "dark"))
     (ASSETS / "flashy-hero.svg").write_text(flashy_svg(on_dark(52, 34)))
     print(f"built assets from {'photo ' + str(photo) if photo else 'AK monogram placeholder'}")
 

@@ -1,12 +1,13 @@
 name: Build ASCII portrait
 
 # Upload assets/photo.jpg (or .png) on github.com and this regenerates the
-# ASCII portrait inside every hero SVG, then commits the result.
+# ASCII portrait (terminal + flashy) and the duotone premium portrait, then commits the result.
 on:
   push:
     paths:
       - "assets/photo.*"
-      - "scripts/build_assets.py"
+      - "assets/photo.json"
+      - "scripts/build_*.py"
   workflow_dispatch:
 
 permissions:
@@ -20,8 +21,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install pillow
+      - run: pip install pillow fonttools uharfbuzz
       - run: python scripts/build_assets.py
+      - run: python scripts/build_premium.py
       - name: Commit regenerated assets
         run: |
           git config user.name "github-actions[bot]"
