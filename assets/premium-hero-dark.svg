@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380" role="img" aria-labelledby="t d">
+  <title id="t">Abdullah Karimli — product developer in Baku</title>
+  <desc id="d">Editorial header reading “I build software, start to finish.” beside an ASCII portrait set inside an arch.</desc>
+  <style>
+    .r, .f { opacity: 0; animation: in 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .f { transform: translateY(8px); }
+    @keyframes in { to { opacity: 1; transform: none; } }
+    .dot { animation: pulse 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite; transform-origin: 63px 312px; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+    @media (prefers-reduced-motion: reduce) { .r, .f, .dot { animation: none !important; opacity: 1 !important; transform: none !important; } }
+  </style>
+  <defs>
+    <clipPath id="arch"><path d="M600 352 V160 A129 129 0 0 1 858 160 V352 Z"/></clipPath>
+  </defs>
+  <rect width="900" height="380" rx="18" fill="#151311"/>
+  <rect x=".5" y=".5" width="899" height="379" rx="17.5" fill="none" stroke="#2E2A26"/>
+  <text class="f" x="56" y="78" fill="#E2895A" font-family="-apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="3.2">ABDULLAH KARIMLI — PRODUCT DEVELOPER, BAKU</text>
+  <line class="f" x1="56" y1="98" x2="120" y2="98" stroke="#E2895A" stroke-width="2" style="animation-delay:60ms"/>
+  <text class="f" x="54" y="168" fill="#EFE8DD" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif" font-size="56" letter-spacing="-1.2" style="animation-delay:120ms">I build software,</text>
+  <text class="f" x="54" y="232" fill="#EFE8DD" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif" font-size="56" font-style="italic" letter-spacing="-1.2" style="animation-delay:180ms">start to finish.</text>
+  <text class="f" x="56" y="274" fill="#A39A8E" font-family="-apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" style="animation-delay:240ms">Apps, websites &amp; games — designed, built and shipped solo.</text>
+  <g class="f" style="animation-delay:300ms">
+    <circle class="dot" cx="63" cy="312" r="4.5" fill="#3FA66B"/>
+    <text x="76" y="317" fill="#EFE8DD" font-family="-apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600">Taking on new projects</text>
+    <text x="246" y="317" fill="#A39A8E" font-family="-apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13">·  AZ / EN / RU  ·  Web · Mobile · Games · AI</text>
+  </g>
+  <path d="M600 352 V160 A129 129 0 0 1 858 160 V352 Z" fill="none" stroke="#2E2A26" stroke-width="1.5"/>
+  <g clip-path="url(#arch)">
+    <text class="r" x="618" y="70.0" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.250s" xml:space="preserve">                ..............                </text>
+    <text class="r" x="618" y="78.4" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.262s" xml:space="preserve">             ...              ...             </text>
+    <text class="r" x="618" y="86.8" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.274s" xml:space="preserve">           ..   .:=+*#%%#*+=:.   ..           </text>
+    <text class="r" x="618" y="95.2" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.286s" xml:space="preserve">          .  .-*@@@@@%%%%@@@@@#=.  ..         </text>
+    <text class="r" x="618" y="103.6" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.298s" xml:space="preserve">        .  .+@@@#=:.      .:=*@@@+.  .        </text>
+    <text class="r" x="618" y="112.0" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.310s" xml:space="preserve">       . .=@@#-.     ....     .-#@@+. .       </text>
+    <text class="r" x="618" y="120.4" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.322s" xml:space="preserve">      . :#@%-   .....    .....   -#@%: .      </text>
+    <text class="r" x="618" y="128.8" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.334s" xml:space="preserve">     . -@@+. ...              ...  =@@- .     </text>
+    <text class="r" x="618" y="137.2" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.346s" xml:space="preserve">    . -@@- ....       .......... .. -@@= .    </text>
+    <text class="r" x="618" y="145.6" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.358s" xml:space="preserve">   . :@@- .                          :@@- .   </text>
+    <text class="r" x="618" y="154.0" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.370s" xml:space="preserve">  ...%@= . :--..    . .--------:  :--:*@%...  </text>
+    <text class="r" x="618" y="162.4" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.382s" xml:space="preserve">  . +@# ..:@@@= .   . :%%@@@@%%- .=#@@%%@+ .  </text>
+    <text class="r" x="618" y="170.8" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.394s" xml:space="preserve"> ...@@:.. *@@@@...      .@@@@- .. .*@+..@@. . </text>
+    <text class="r" x="618" y="179.2" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.406s" xml:space="preserve"> . =@# . :@@@@@+ .    ..:@@@@-.  =@#: . *@= . </text>
+    <text class="r" x="618" y="187.6" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.418s" xml:space="preserve"> . *@=.. #%+@@@@:..   . :@@@@- :#@=  ...-@# . </text>
+    <text class="r" x="618" y="196.0" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.430s" xml:space="preserve"> . %@:  -@- %@@@* .   . :@@@@-+@@. .. . :@%. .</text>
+    <text class="r" x="618" y="204.4" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.442s" xml:space="preserve">. .@@...%%..=@@@@: .  . :@@@@@@@@*. . . .@@. .</text>
+    <text class="r" x="618" y="212.8" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.454s" xml:space="preserve">. .@@: =@:   #@@@# .  . :@@@@*@@@@%: .. .@@. .</text>
+    <text class="r" x="618" y="221.2" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.466s" xml:space="preserve"> . %@:.@@====*@@@@- . . :@@@@::%@@@@- ..:@%. .</text>
+    <text class="r" x="618" y="229.6" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.478s" xml:space="preserve"> . *@-=@*#####%@@@%.... :@@@@- .#@@@@=  -@# . </text>
+    <text class="r" x="618" y="238.0" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.490s" xml:space="preserve"> . =@#@*      :@@@@= .. :@@@@-. .*@@@@*.*@= . </text>
+    <text class="r" x="618" y="246.4" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.502s" xml:space="preserve"> . .@@@....... *@@@@. . .@@@@- .. =@@@@%@@. . </text>
+    <text class="r" x="618" y="254.8" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.514s" xml:space="preserve"> ..-@@@%+ .. .#%@@@@@#-%%@@@@%%=.. -%@@@@@- . </text>
+    <text class="r" x="618" y="263.2" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.526s" xml:space="preserve"> . .-%@*:..  .:-::::-:.--::::--. .. .:+@@-... </text>
+    <text class="r" x="618" y="271.6" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.538s" xml:space="preserve">     :@@: .                        . :%@-     </text>
+    <text class="r" x="618" y="280.0" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.550s" xml:space="preserve">   .. -@@- .. .................. .. :@@= ..   </text>
+    <text class="r" x="618" y="288.4" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.562s" xml:space="preserve">     . -@@=  ...              ...  =@@= .     </text>
+    <text class="r" x="618" y="296.8" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.574s" xml:space="preserve">      . :%@#:   ....      ....   :#@%- .      </text>
+    <text class="r" x="618" y="305.2" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.586s" xml:space="preserve">       . .+@@#-.    ......    .-#@@+. .       </text>
+    <text class="r" x="618" y="313.6" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.598s" xml:space="preserve">        .  :+@@@*-:.      .:-*@@@*:  .        </text>
+    <text class="r" x="618" y="322.0" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.610s" xml:space="preserve">         ..  .=#@@@@%%###%@@@@#=.  ..         </text>
+    <text class="r" x="618" y="330.4" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.622s" xml:space="preserve">           ..   .:=*#%%%%#*=-.   ..           </text>
+    <text class="r" x="618" y="338.8" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.634s" xml:space="preserve">             ...              ...             </text>
+    <text class="r" x="618" y="347.2" font-size="7.2" textLength="222" lengthAdjust="spacingAndGlyphs" fill="#D9CFC2" style="animation-delay:0.646s" xml:space="preserve">                ..............                </text>
+  </g>
+</svg>

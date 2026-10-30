@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440" role="img" aria-labelledby="t d">
+  <title id="t">Abdullah Karimli — terminal profile</title>
+  <desc id="d">A terminal window running neofetch: an ASCII portrait of Abdullah next to his role, location, stack and availability.</desc>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 14px; }
+    .r, .l { opacity: 0; animation: in 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .l { transform: translateX(-6px); }
+    @keyframes in { to { opacity: 1; transform: none; } }
+    .type { animation: type 900ms steps(24) 150ms both; }
+    @keyframes type { from { width: 0; } to { width: 203px; } }
+    .cur { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .r, .l, .type { animation: none !important; opacity: 1 !important; transform: none !important; } }
+  </style>
+  <defs>
+    <clipPath id="typed"><rect class="type" x="64" y="40" height="26" width="203"/></clipPath>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#161B22"/><stop offset="1" stop-color="#0D1117"/></linearGradient>
+  </defs>
+  <rect x="1" y="1" width="898" height="438" rx="14" fill="url(#glass)" stroke="#30363D"/>
+  <rect x="1" y="1" width="898" height="30" rx="14" fill="#1C2128"/>
+  <rect x="1" y="17" width="898" height="14" fill="#1C2128"/>
+  <line x1="1" y1="31" x2="899" y2="31" stroke="#30363D"/>
+  <circle cx="22" cy="16" r="6" fill="#FF5F57"/><circle cx="42" cy="16" r="6" fill="#FEBC2E"/><circle cx="62" cy="16" r="6" fill="#28C840"/>
+  <text x="450" y="20" text-anchor="middle" fill="#8B949E" font-size="12">abdullah@baku: ~</text>
+  <text x="24" y="58" fill="#7EE787" font-weight="700">➜</text><text x="44" y="58" fill="#79C0FF">~</text>
+  <g clip-path="url(#typed)"><text x="64" y="58" fill="#E6EDF3">neofetch --user abdullah</text></g>
+  <rect class="cur" x="271" y="46" width="8" height="15" fill="#E6EDF3" opacity=".8"/>
+  <g>
+    <text class="r" x="36" y="92.0" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.550s" xml:space="preserve">             ...              ....            </text>
+    <text class="r" x="36" y="104.4" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.578s" xml:space="preserve">          ..     .:-==++==-:.     ..          </text>
+    <text class="r" x="36" y="116.8" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.606s" xml:space="preserve">        ..   :+#%@@%%####%%@@%#+:   ..        </text>
+    <text class="r" x="36" y="129.2" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.634s" xml:space="preserve">      ..  :+%@%*=:.        .:-+%@%+:  ..      </text>
+    <text class="r" x="36" y="141.6" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.662s" xml:space="preserve">     .  :*@%+:      .......     .=%@#:  .     </text>
+    <text class="r" x="36" y="154.0" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.690s" xml:space="preserve">    . .+@%-   .....   ..........   -%@*. .    </text>
+    <text class="r" x="36" y="166.4" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.718s" xml:space="preserve">   . .#@+                       ..   =@%: .   </text>
+    <text class="r" x="36" y="178.8" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.746s" xml:space="preserve">  ...%@- . -==. .   . .++=====+:..:===#@%: .  </text>
+    <text class="r" x="36" y="191.2" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.774s" xml:space="preserve">  ..#@= . =@@@# ..  . .=+@@@@*=:  :#@%==@%... </text>
+    <text class="r" x="36" y="203.6" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.802s" xml:space="preserve"> . -@# . :@@@@@+ .      .@@@@:  .+#*-   *@= . </text>
+    <text class="r" x="36" y="216.0" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.830s" xml:space="preserve"> . #@-...@*-@@@@- .   ..:@@@@:.+%*:  ...:@# . </text>
+    <text class="r" x="36" y="228.4" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.858s" xml:space="preserve">. .%@:. #%. +@@@@: .  . :@@@@%@@@=  ... .@@. .</text>
+    <text class="r" x="36" y="240.8" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.886s" xml:space="preserve">. .%@: +@:...#@@@%... . :@@@@+#@@@%=  ...@@. .</text>
+    <text class="r" x="36" y="253.2" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.914s" xml:space="preserve"> . #@:-@%*####@@@@* ....:@@@@: =%@@@#-  :@% . </text>
+    <text class="r" x="36" y="265.6" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.942s" xml:space="preserve"> . -@#@+ .....:@@@@=    .@@@@:  .+@@@@*:*@= . </text>
+    <text class="r" x="36" y="278.0" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.970s" xml:space="preserve"> . :@@@=-    .=#@@@@+=:=+@@@@*=:  :*@@@@@@: . </text>
+    <text class="r" x="36" y="290.4" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:0.998s" xml:space="preserve"> . :=%@#:.....========:========:..  --*@@=: . </text>
+    <text class="r" x="36" y="302.8" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:1.026s" xml:space="preserve">     :%@=  ...                  ...  =@%:     </text>
+    <text class="r" x="36" y="315.2" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:1.054s" xml:space="preserve">   .. .*@%-   ..................   -%@*. ..   </text>
+    <text class="r" x="36" y="327.6" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:1.082s" xml:space="preserve">     .  :#@%=.     ........     .=%@#-  .     </text>
+    <text class="r" x="36" y="340.0" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:1.110s" xml:space="preserve">      ..  :*%@%+-:.        .:-+#@@*:  ..      </text>
+    <text class="r" x="36" y="352.4" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:1.138s" xml:space="preserve">        ..   :+#%@%%######%%@%#+-.  ..        </text>
+    <text class="r" x="36" y="364.8" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:1.166s" xml:space="preserve">          ..     .:-=++++=--.     ..          </text>
+    <text class="r" x="36" y="377.2" font-size="10.5" textLength="300" lengthAdjust="spacingAndGlyphs" fill="#7EE787" style="animation-delay:1.194s" xml:space="preserve">            ....              ....            </text>
+  </g>
+  <text class="l" x="372" y="116" style="animation-delay:1.15s"><tspan fill="#7EE787" font-weight="700">abdullah</tspan><tspan fill="#8B949E">@</tspan><tspan fill="#79C0FF" font-weight="700">baku</tspan></text><text class="l" x="372" y="138" fill="#3B4252" style="animation-delay:1.22s">──────────────────</text><text class="l" x="372" y="160" style="animation-delay:1.29s"><tspan fill="#F0883E" font-weight="700">Role</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#E6EDF3">Product developer — idea, design, code, launch</tspan></text><text class="l" x="372" y="182" style="animation-delay:1.36s"><tspan fill="#F0883E" font-weight="700">Base</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#E6EDF3">Baku, Azerbaijan 🇦🇿  ·  working worldwide</tspan></text><text class="l" x="372" y="204" style="animation-delay:1.43s"><tspan fill="#F0883E" font-weight="700">Ships</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#E6EDF3">Web apps · Mobile apps · Games · AI tools</tspan></text><text class="l" x="372" y="226" style="animation-delay:1.50s"><tspan fill="#F0883E" font-weight="700">Front</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#E6EDF3">Next.js · React · TypeScript · Tailwind · Vite</tspan></text><text class="l" x="372" y="248" style="animation-delay:1.57s"><tspan fill="#F0883E" font-weight="700">Mobile</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#E6EDF3">Expo · React Native · Skia · Capacitor</tspan></text><text class="l" x="372" y="270" style="animation-delay:1.64s"><tspan fill="#F0883E" font-weight="700">Back</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#E6EDF3">Supabase · PostgreSQL · Edge Functions · Docker</tspan></text><text class="l" x="372" y="292" style="animation-delay:1.71s"><tspan fill="#F0883E" font-weight="700">AI/ML</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#E6EDF3">Python · Whisper · OpenCV · FFmpeg</tspan></text><text class="l" x="372" y="314" style="animation-delay:1.78s"><tspan fill="#F0883E" font-weight="700">Games</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#E6EDF3">Roblox / Luau · 60 fps Skia engines</tspan></text><text class="l" x="372" y="336" style="animation-delay:1.85s"><tspan fill="#F0883E" font-weight="700">Speaks</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#E6EDF3">Azerbaijani · English · Russian</tspan></text><text class="l" x="372" y="358" style="animation-delay:1.92s"><tspan fill="#F0883E" font-weight="700">Status</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#7EE787">● taking on new projects</tspan></text>
+  <rect class="l" x="372" y="376" width="26" height="14" rx="3" fill="#F85149" style="animation-delay:1.99s"/><rect class="l" x="402" y="376" width="26" height="14" rx="3" fill="#F0883E" style="animation-delay:1.99s"/><rect class="l" x="432" y="376" width="26" height="14" rx="3" fill="#D29922" style="animation-delay:1.99s"/><rect class="l" x="462" y="376" width="26" height="14" rx="3" fill="#7EE787" style="animation-delay:1.99s"/><rect class="l" x="492" y="376" width="26" height="14" rx="3" fill="#79C0FF" style="animation-delay:1.99s"/><rect class="l" x="522" y="376" width="26" height="14" rx="3" fill="#BC8CFF" style="animation-delay:1.99s"/><rect class="l" x="552" y="376" width="26" height="14" rx="3" fill="#FF7AC6" style="animation-delay:1.99s"/><rect class="l" x="582" y="376" width="26" height="14" rx="3" fill="#E6EDF3" style="animation-delay:1.99s"/>
+</svg>
