@@ -15,7 +15,7 @@ import sys
 from html import escape
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
+from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "assets"
@@ -58,9 +58,10 @@ def monogram() -> Image.Image:
     return img
 
 
-def load_source(photo: Path | None, cfg: dict) -> Image.Image:
+def load_source(photo: Path | None, cfg: dict) -> tuple[Image.Image, Image.Image | None]:
+    """Returns the prepared portrait and a subject mask (255 = keep, 0 = background)."""
     if photo is None:
-        return monogram()
+        return monogram(), None
     img = ImageOps.exif_transpose(Image.open(photo)).convert("L")
     if "crop" in cfg:
         fl, ft, fs = cfg["crop"]
@@ -71,21 +72,34 @@ def load_source(photo: Path | None, cfg: dict) -> Image.Image:
         left = (img.width - side) // 2
         top = max(0, min((img.height - side) // 4, img.height - side))
     img = img.crop((left, top, left + side, top + side))
-    img = ImageOps.autocontrast(img, cutoff=2)
-    img = ImageEnhance.Contrast(img).enhance(1.35)
-    return img.filter(ImageFilter.UnsharpMask(radius=2, percent=160, threshold=2))
+
+    # A bright sky or wall reads as background: drop it before equalizing,
+    # otherwise it turns into noise around the head.
+    cut = cfg.get("background_above", 205)
+    mask = img.point(lambda v: 0 if v > cut else 255).filter(ImageFilter.MedianFilter(9))
+    mask = mask.filter(ImageFilter.GaussianBlur(side / 120))
+
+    # Equalizing pulls features out of backlit, shadowed faces.
+    img = ImageOps.equalize(img, mask=mask) if cfg.get("equalize", True) else ImageOps.autocontrast(img, cutoff=2)
+    img = ImageEnhance.Contrast(img).enhance(1.2)
+    return img.filter(ImageFilter.UnsharpMask(radius=2, percent=160, threshold=2)), mask
 
 
-def to_ascii(img: Image.Image, cols: int, rows: int, invert: bool, vignette: bool = False) -> list[str]:
-    """invert=True maps bright pixels to dense glyphs instead of dark ones."""
+def to_ascii(img: Image.Image, cols: int, rows: int, invert: bool, mask: Image.Image | None = None) -> list[str]:
+    """invert=True maps bright pixels to dense glyphs: a positive image in light ink on dark panels."""
     small = img.resize((cols, rows), Image.LANCZOS)
-    if vignette:
-        # Fade everything outside a head-shaped ellipse to the blank end of the
-        # ramp so the background stays empty instead of becoming a wall of glyphs.
-        mask = Image.new("L", (cols, rows), 0)
-        ImageDraw.Draw(mask).ellipse((-cols * 0.04, -rows * 0.02, cols * 1.04, rows * 1.12), fill=255)
-        mask = mask.filter(ImageFilter.GaussianBlur(min(cols, rows) / 10))
-        small = Image.composite(small, Image.new("L", small.size, 0 if invert else 255), mask)
+    if mask is not None:
+        # Blank the background, then soften the frame edge with a head-shaped
+        # ellipse so stray scenery fades out instead of ending in a hard line.
+        keep = mask.resize((cols, rows), Image.LANCZOS)
+        oval = Image.new("L", (cols, rows), 0)
+        ImageDraw.Draw(oval).ellipse((-cols * 0.06, -rows * 0.04, cols * 1.06, rows * 1.2), fill=255)
+        oval = oval.filter(ImageFilter.GaussianBlur(min(cols, rows) / 12))
+        keep = ImageChops.multiply(keep, oval)
+        if invert:
+            # Dark hair would vanish in a positive render; a density floor keeps the silhouette.
+            small = small.point(lambda v: 80 + v * 175 // 255)
+        small = Image.composite(small, Image.new("L", small.size, 0 if invert else 255), keep)
     ramp = RAMP[::-1] if invert else RAMP
     px = small.load()
     out = []
@@ -291,18 +305,19 @@ def flashy_svg(face: list[str]) -> str:
 def main() -> None:
     photo = find_photo(sys.argv)
     cfg = photo_config() if photo else {}
-    src = load_source(photo, cfg)
+    src, mask = load_source(photo, cfg)
     ASSETS.mkdir(exist_ok=True)
 
-    inv = bool(cfg.get("invert", False))
-    vig = photo is not None
-    face = lambda cols, rows: to_ascii(src, cols, rows, invert=inv, vignette=vig)
+    # Photos render as a positive image: light ink on dark panels needs bright
+    # pixels dense. The monogram is ink on paper and reads right either way.
+    on_dark = lambda cols, rows: to_ascii(src, cols, rows, invert=photo is not None, mask=mask)
+    on_light = lambda cols, rows: to_ascii(src, cols, rows, invert=False, mask=mask)
 
-    (ASSETS / "face.txt").write_text("\n".join(face(64, 32)) + "\n")
-    (ASSETS / "terminal-hero.svg").write_text(terminal_svg(face(46, 24)))
-    (ASSETS / "premium-hero-light.svg").write_text(premium_svg(face(46, 34), "light"))
-    (ASSETS / "premium-hero-dark.svg").write_text(premium_svg(face(46, 34), "dark"))
-    (ASSETS / "flashy-hero.svg").write_text(flashy_svg(face(52, 34)))
+    (ASSETS / "face.txt").write_text("\n".join(on_light(64, 32)) + "\n")
+    (ASSETS / "terminal-hero.svg").write_text(terminal_svg(on_dark(46, 24)))
+    (ASSETS / "premium-hero-light.svg").write_text(premium_svg(on_light(46, 34), "light"))
+    (ASSETS / "premium-hero-dark.svg").write_text(premium_svg(on_dark(46, 34), "dark"))
+    (ASSETS / "flashy-hero.svg").write_text(flashy_svg(on_dark(52, 34)))
     print(f"built assets from {'photo ' + str(photo) if photo else 'AK monogram placeholder'}")
 
 

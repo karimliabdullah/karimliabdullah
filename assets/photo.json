@@ -1,4 +1,5 @@
 {
-  "crop": [0.42, 0.26, 0.32],
-  "invert": false
+  "crop": [0.45, 0.265, 0.28],
+  "background_above": 205,
+  "equalize": true
 }
