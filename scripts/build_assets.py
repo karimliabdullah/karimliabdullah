@@ -142,7 +142,8 @@ def terminal_svg(face: list[str]) -> str:
         ("Back", "Supabase · PostgreSQL · Edge Functions · Docker"),
         ("AI/ML", "Python · Whisper · OpenCV · FFmpeg"),
         ("Games", "Roblox / Luau · 60 fps Skia engines"),
-        ("Speaks", "Azerbaijani · English · Russian"),
+        ("Speaks", "Azerbaijani · Turkish · English · Russian"),
+        ("", "Arabic · French · Chinese"),
         ("Status", "● taking on new projects"),
     ]
     rows = []
@@ -156,6 +157,12 @@ def terminal_svg(face: list[str]) -> str:
                 f'<text class="l" x="372" y="{y}" style="animation-delay:{d:.2f}s">'
                 f'<tspan fill="#7EE787" font-weight="700">{item[0]}</tspan><tspan fill="#8B949E">{item[1]}</tspan>'
                 f'<tspan fill="#79C0FF" font-weight="700">{item[2]}</tspan></text>'
+            )
+        elif not item[0]:
+            # Continuation of the previous row, aligned under its value column.
+            rows.append(
+                f'<text class="l" x="{372 + 8 * 8.45:.0f}" y="{y}" style="animation-delay:{d:.2f}s">'
+                f'<tspan fill="#E6EDF3">{escape(item[1])}</tspan></text>'
             )
         else:
             val_fill = "#7EE787" if item[0] == "Status" else "#E6EDF3"
