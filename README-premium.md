@@ -13,7 +13,7 @@
 
 I own the whole thing: **the idea, the screens, the database, the launch, and the fixes after it.**
 
-My software runs a hearing clinic, restaurant floors, salon calendars and the canteens of a **3,000-employee** company. My game pays its players in **Azercell, Bakcell and Nar** credit. I ship in Azerbaijani, English and Russian.
+My software runs a hearing clinic, restaurant floors, salon calendars and the canteens of a **3,000-employee** company. My game pays its players in **Azercell, Bakcell and Nar** credit. I ship in Azerbaijani, Turkish, English, Russian, Arabic, French and Chinese.
 
 </td>
 <td width="38%" valign="top">

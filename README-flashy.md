@@ -22,7 +22,7 @@
 ## ⚡ The short version
 
 - 🧠 **Full-stack product builder.** I handle idea, UX, UI, frontend, backend, data, launch and support. No agency, no hand-offs.
-- 🏙️ **Baku-made, world-ready.** My software runs in Azerbaijani, English and Russian.
+- 🏙️ **Baku-made, world-ready.** My software runs in Azerbaijani, Turkish, English, Russian, Arabic, French and Chinese.
 - 📡 **Big-network energy.** Metro Run pays players in **Azercell**, **Bakcell** and **Nar** mobile credit.
 - 🏢 **Enterprise-proven.** SeaBreeze FMS runs the canteens of a company with **3,000+ employees**.
 - 🎮 **60 fps or it doesn't ship.** Skia game engines, Roblox sims, real-time floor plans.

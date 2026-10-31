@@ -23,7 +23,7 @@ abdullah@baku:~$ cat about.txt
 ```
 
 > I don't hand off. I take a product from **the first call → prototype → design → frontend → backend → launch → the fixes after**.
-> Clinics, restaurants, salons, a 3,000-employee company, fintech and games: if it runs on a screen, I ship it, in **Azerbaijani, English and Russian**.
+> Clinics, restaurants, salons, a 3,000-employee company, fintech and games: if it runs on a screen, I ship it, in **Azerbaijani, Turkish, English, Russian, Arabic, French and Chinese**.
 
 ```console
 abdullah@baku:~$ ls -la ~/shipped
